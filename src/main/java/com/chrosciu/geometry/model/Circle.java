@@ -1,8 +1,10 @@
-package com.chrosciu.geometry;
+package com.chrosciu.geometry.model;
 
-record Circle(Point center, double radius) implements Shape {
+import lombok.NonNull;
 
-    Circle {
+public record Circle(@NonNull Point center, double radius) implements Shape {
+
+    public Circle {
        if (radius < 0) {
           throw new IllegalArgumentException("Negative radius is not allowed");
        }
@@ -16,5 +18,10 @@ record Circle(Point center, double radius) implements Shape {
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
+    }
+
+    @Override
+    public Point getGravityCenter() {
+        return center;
     }
 }

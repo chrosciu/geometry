@@ -1,4 +1,4 @@
-package com.chrosciu.geometry;
+package com.chrosciu.geometry.model;
 
 record Point(double x, double y) {
     double distance(Point p) {

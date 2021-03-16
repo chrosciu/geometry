@@ -1,18 +1,25 @@
-package com.chrosciu.geometry;
+package com.chrosciu.geometry.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NonNull;
 
+import java.util.Arrays;
 import java.util.List;
 
 @AllArgsConstructor
-final class Triangle extends Polygon {
+@Getter
+public final class Triangle extends Polygon {
+    @NonNull
     final Point first;
+    @NonNull
     final Point second;
+    @NonNull
     final Point third;
 
     @Override
     List<Point> getVertices() {
-        return null;
+        return Arrays.asList(first, second, third);
     }
 
     @Override

@@ -13,6 +13,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>geometry</name>
     <description>Geometry demo - Java 16</description>
+
+    <properties>
+        <jackson-bom.version>2.12.2</jackson-bom.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

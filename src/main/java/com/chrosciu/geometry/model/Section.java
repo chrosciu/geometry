@@ -1,13 +1,18 @@
-package com.chrosciu.geometry;
+package com.chrosciu.geometry.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NonNull;
 
 import java.util.Arrays;
 import java.util.List;
 
 @AllArgsConstructor
-final class Section extends Polygon {
+@Getter
+public final class Section extends Polygon {
+    @NonNull
     final Point start;
+    @NonNull
     final Point end;
 
     @Override
