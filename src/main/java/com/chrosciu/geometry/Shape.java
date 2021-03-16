@@ -1,4 +1,6 @@
 package com.chrosciu.geometry;
 
-public sealed class Shape permits Triangle {
+sealed interface Shape permits Circle, Polygon {
+    double getPerimeter();
+    double getArea();
 }
