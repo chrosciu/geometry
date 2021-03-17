@@ -2,7 +2,7 @@ package com.chrosciu.geometry.model;
 
 import lombok.NonNull;
 
-public record Circle(@NonNull Point center, double radius) implements Shape {
+public final record Circle(@NonNull Point center, double radius) implements Shape {
 
     public Circle {
        if (radius < 0) {
