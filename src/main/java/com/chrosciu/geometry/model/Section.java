@@ -24,4 +24,14 @@ public final class Section extends Polygon {
     public double getArea() {
         return 0;
     }
+
+    public static String getAvatar() {
+        return """
+            *
+           *
+          *   \
+         * \s
+        *
+        """;
+    }
 }

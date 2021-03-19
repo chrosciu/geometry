@@ -28,4 +28,14 @@ public final class Triangle extends Polygon {
                 ((second.x() - first.x()) * (third.y() - first.y())) - ((second.y() - first.y()) * (third.x() - first.x()))
         );
     }
+
+    public static String getAvatar() {
+        return """
+            *
+           * *
+          *   *
+         *     *
+        *********
+        """.indent(4);
+    }
 }
