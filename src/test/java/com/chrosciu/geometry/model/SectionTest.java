@@ -45,4 +45,9 @@ public class SectionTest {
     public void shouldReturnTheSameHashCodeIfPointsAreInReversedOrder() {
         assertEquals(new Section(new Point(3, 4), new Point(1, 2)).hashCode(), section.hashCode());
     }
+
+    @Test
+    public void shouldProperlyCalculateGravityCenter() {
+        assertEquals(new Point(2, 3), section.getGravityCenter());
+    }
 }
