@@ -25,14 +25,4 @@ public final record Circle(@NonNull Point center, double radius) implements Shap
         return center;
     }
 
-    public static String getAvatar() {
-        return """
-            *  *
-         *        *
-        *          *
-        *          *
-         *        *
-            *  *
-""";
-    }
 }

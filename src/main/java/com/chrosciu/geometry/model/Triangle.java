@@ -29,13 +29,4 @@ public final class Triangle extends Polygon {
         );
     }
 
-    public static String getAvatar() {
-        return """
-            *
-           * *
-          *   *
-         *     *
-        *********
-        """.indent(4);
-    }
 }

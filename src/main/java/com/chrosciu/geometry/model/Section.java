@@ -27,16 +27,6 @@ public final class Section extends Polygon {
         return 0;
     }
 
-    public static String getAvatar() {
-        return """
-            *
-           *
-          *   \
-         * \s
-        *
-        """;
-    }
-
     @Override
     public boolean equals(Object anotherObject) {
         if (anotherObject instanceof Section anotherSection) {
