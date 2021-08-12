@@ -6,11 +6,9 @@ import com.chrosciu.geometry.model.Shape;
 import com.chrosciu.geometry.model.Triangle;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/shape")
 public class ShapeController {
     @PostMapping("/circle")
     public Shape circle(@RequestBody Circle circle) {
@@ -26,5 +24,4 @@ public class ShapeController {
     public Shape section(@RequestBody Section section) {
         return section;
     }
-
 }
