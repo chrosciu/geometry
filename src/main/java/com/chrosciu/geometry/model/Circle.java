@@ -1,18 +1,17 @@
 package com.chrosciu.geometry.model;
 
-import lombok.NonNull;
 
-public final record Circle(@NonNull Point center, double radius) implements Shape {
+public final record Circle(Point center, double radius) implements Shape {
+    private static int instancesCount = 0;
 
     public Circle {
-       if (radius < 0) {
-          throw new IllegalArgumentException("Negative radius is not allowed");
-       }
-    }
-
-    @Override
-    public double getPerimeter() {
-        return 2 * Math.PI * radius;
+        if (radius < 0) {
+            throw new IllegalArgumentException("Negative radius is not allowed");
+        }
+        if (null == center) {
+            center = new Point(0, 0);
+        }
+        ++instancesCount;
     }
 
     @Override
@@ -20,9 +19,7 @@ public final record Circle(@NonNull Point center, double radius) implements Shap
         return Math.PI * radius * radius;
     }
 
-    @Override
-    public Point getGravityCenter() {
-        return center;
+    public int getInstancesCount() {
+        return instancesCount;
     }
-
 }

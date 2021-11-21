@@ -1,0 +1,35 @@
+POST http://localhost:8080/circle
+Content-Type: application/json
+
+{
+  "center" : {
+    "x": 2.0,
+    "y": 3.0
+  },
+  "radius": 1.0
+}
+
+###
+
+POST http://localhost:8080/circle
+Content-Type: application/json
+
+{
+  "radius": 1.0
+}
+
+###
+
+POST http://localhost:8080/square
+Content-Type: application/json
+
+{
+  "topLeft" : {
+    "x": 2.0,
+    "y": 3.0
+  },
+  "size": 1.0
+}
+
+
+
