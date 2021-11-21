@@ -31,5 +31,18 @@ Content-Type: application/json
   "size": 1.0
 }
 
+###
+
+POST http://localhost:8080/rectangle
+Content-Type: application/json
+
+{
+  "topLeft" : {
+    "x": 2.0,
+    "y": 3.0
+  },
+  "width": 1.0,
+  "height": 2.0
+}
 
 

@@ -1,6 +1,7 @@
 package com.chrosciu.geometry.web;
 
 import com.chrosciu.geometry.model.Circle;
+import com.chrosciu.geometry.model.Rectangle;
 import com.chrosciu.geometry.model.Shape;
 import com.chrosciu.geometry.model.Square;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +16,12 @@ public class ShapeController {
     }
 
     @PostMapping("/square")
-    public Shape triangle(@RequestBody Square square) {
+    public Shape square(@RequestBody Square square) {
         return square;
+    }
+
+    @PostMapping("/rectangle")
+    public Shape rectangle(@RequestBody Rectangle rectangle) {
+        return rectangle;
     }
 }
